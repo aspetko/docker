@@ -1,11 +1,11 @@
 # docker-glassfish-4.1.1 image
 GlassFish is an open-source application server project started by Sun Microsystems for the Java EE platform. After Oracle Corporation bought Sun Microsystems, Oracle continued the work on Glassfish.
 
-Thank you Oracle for keeping a great product alive. I have seen to many times a great product beeing discontinued for various reasons.
+Thank you Oracle for keeping a great product alive. I have seen to many times a great product beeing discontinued for various reasons. But this is here not the case.
 
 GlassFish is and was the reference implementation of Java EE.
 
-By executing the docker image you agree to the Oracle Binary Code License Agreement for Java, because the image overwrite the header information to download the required software. If you do not agree, do not use this image!
+By executing the docker image you agree to the "Oracle Binary Code License Agreement for Java", because the image overwrite the header information to download the required software. If you do not agree, do not use this image!
 
 In this image is the latest (as of today) version of:
 * Java 1.8 update 74 
@@ -78,4 +78,4 @@ You can use either:
 * the GlassFish Maven Plugin. 
 
 ## Other material
-\[Soon\]: You can find on my business related channel on youtube a video about this container was build and an running example. 
+[Soon]: You can find on my business related channel on youtube a video about this container was build and an running example. 
