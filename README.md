@@ -19,19 +19,27 @@ Under the subdirectory
 ## Building the container
 1. Clone the GitHub repository: 
 
-   $ git clone https://github.com/aspetko/docker-glassfish-4.1.1.git
+      
+      $ git clone https://github.com/aspetko/docker-glassfish-4.1.1.git
+      
 2. Change into the correct directory
 
-   $ cd docker-glassfish-4.1.1/full for the full profile or
+
+    $ cd docker-glassfish-4.1.1/full for the full profile 
+
+or
    
-   $ cd docker-glassfish-4.1.1/web for the web profile
+ 
+    $ cd docker-glassfish-4.1.1/web for the web profile
 3. Execute a Docker build command 
 
-    $ sudo docker build -t glassfish_full_profile:4.1.1 . or
+
+      $ sudo docker build -t glassfish_full_profile:4.1.1 . 
+
+or
     
-    $ sudo docker build -t glassfish_web_profile:4.1.1 . or
-    
-    tag it with whatever you prefer.
+     $ sudo docker build -t glassfish_web_profile:4.1.1 . 
+or tag it with whatever you prefer.
 ## Domain, Username and Password
 The image is setting up the 
 * Default Domain: domain1
@@ -40,26 +48,34 @@ The image is setting up the
 
 # Starting GlassFish on Docker
 To run the image simply type:
-1. $ sudo docker run -d -p 4848:4848 -p 8080:8080 -p 8181:8181 glassfish_full_ofile:4.1.1
-    5059e9a6b95ad47b5ed92a07bfc73e7857d8d1989b1641363578cc59e1f69f63
-2. $ sudo docker ps | grep glassfish
 
-    5059e9a6b95a        glassfish_full_profile:4.1.1 ...
-3. $ sudo docker logs -f 5059e9a6b95a
+    $ sudo docker run -d -p 4848:4848 -p 8080:8080 -p 8181:8181 glassfish_full_ofile:4.1.1
+         5059e9a6b95ad47b5ed92a07bfc73e7857d8d1989b1641363578cc59e1f69f63
 
-The last command (3.) will output the stdout to the console. Because of the -f flag it wont stop.  
+    $ sudo docker ps | grep glassfish
+
+         5059e9a6b95a        glassfish_full_profile:4.1.1 ...
+    $ sudo docker logs -f 5059e9a6b95a
+
+The last command will output the stdout to the console. Because of the -f flag it wont stop.  
 
 All default ports are exposed, by the image:
+
 * the admin console: 4848 
 * the HTTP access: 8080
 * the HTTPS access: 8181
 
-Open http(s)://<ip of the docker machine>:4848 to open the administrative console.
+Open 
+
+    http(s)://\[ip of the docker machine\]:4848
+
+to open the administrative console.
  
 ## Deploying Java EE Applications
 You can use either:
+
 * the administrative console on port 4848 or
 * the GlassFish Maven Plugin. 
 
 ## Other material
-[Soon]: You can find on my business related channel on youtube a video about this container was build and an running example. 
+\[Soon\]: You can find on my business related channel on youtube a video about this container was build and an running example. 
