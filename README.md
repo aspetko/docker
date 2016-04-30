@@ -8,7 +8,7 @@ GlassFish is and was the reference implementation of Java EE.
 By executing the docker image you agree to the "Oracle Binary Code License Agreement for Java", because the image overwrite the header information to download the required software. If you do not agree, do not use this image!
 
 In this image is the latest (as of today) version of:
-* Java 1.8 update 74 
+* Java 1.8 update 92 (Update from 30th of April 2016) 
 * Glassfish 4.1.1
 included.
 
@@ -79,3 +79,4 @@ You can use either:
 
 ## Other material
 [Soon]: You can find on my business related channel on youtube a video about this container was build and an running example. 
+

@@ -7,17 +7,17 @@ MAINTAINER alexander@spetko-it-consulting.eu
 ############################
 ## Install unzip and wget ##
 ############################
-RUN apt-get upgrade \
+RUN apt-get update \
  && apt-get install -y wget unzip
 
 ##################################
 ## Downloading and install Java ##
 ##################################
 RUN cd /tmp \
- && wget -c --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"-O http://download.oracle.com/otn-pub/java/jdk/8u74-b02/jdk-8u74-linux-x64.tar.gz \
+ && wget -c --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"-O http://download.oracle.com/otn-pub/java/jdk/8u92-b14/jdk-8u92-linux-x64.tar.gz \ 
  && cd /opt/ \
- && tar xzvf /tmp/jdk-8u74-linux-x64.tar.gz \
- && rm -f /tmp/jdk-8u74-linux-x64.tar.gz
+ && tar xzvf /tmp/jdk-8u92-linux-x64.tar.gz \
+ && rm -f /tmp/jdk-8u92-linux-x64.tar.gz
 
 ###########################
 ## Downloading Glassfish ##
@@ -69,12 +69,12 @@ WORKDIR /opt/glassfish4/bin
 ###################################
 ## Set the path to the JAVA_HOME ##
 ###################################
-RUN echo "export PATH=$PATH:/opt/glassfish4/bin:/opt/jdk1.8.0_74/bin" >> /opt/glassfish4/.bashrc 
+RUN echo "export PATH=$PATH:/opt/glassfish4/bin:/opt/jdk1.8.0_92/bin" >> /opt/glassfish4/.bashrc 
 
 #######################################
 ## Final configuration for glassfish ##
 #######################################
-RUN export PATH=$PATH:/opt/glassfish4/bin:/opt/jdk1.8.0_74/bin \ 
+RUN export PATH=$PATH:/opt/glassfish4/bin:/opt/jdk1.8.0_92/bin \ 
  && ./asadmin start-domain \
  && ./asadmin --user admin --passwordfile /opt/glassfish4/pwdfile enable-secure-admin \
  && ./asadmin stop-domain
