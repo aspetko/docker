@@ -77,6 +77,9 @@ You can use either:
 * the administrative console on port 4848 or
 * the GlassFish Maven Plugin. 
 
+## On Dockerhub
+The full profile image is availible on Dockerhub. Docker pull command:
+
+     docker pull aspetko/docker-glassfish
 ## Other material
 [Soon]: You can find on my business related channel on youtube a video about this container was build and an running example. 
-
